@@ -31,16 +31,14 @@ function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
 
-    let changedElm = d3.select(this).select("input");
+    let changedElm = d3.select(this)
 
     // 4b. Save the value that was changed as a variable.
     let elmvalue = changedElm.property("value");
-    console.log(elmvalue)
-
-    // 4c. Save the id of the filter that was changed as a variable.
+    
+       // 4c. Save the id of the filter that was changed as a variable.
     let filterId = changedElm.attr("id"); 
-    console.log(filterID)
-
+    
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
 if (elmvalue) {
@@ -55,9 +53,11 @@ else {
     // loadTableRows(tableData);
   filterTable();
 }
+
   // 7. Use this function to filter the table when data is entered.
   function filterTable() {
-  
+
+
     // 8. Set the filtered data to the tableData.
     // let filter = d3.select("updateTable").property("value");
     let filteredData = tableData;
